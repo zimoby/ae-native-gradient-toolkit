@@ -11,6 +11,7 @@ import {
   realpathSync,
   rmSync,
   symlinkSync,
+  unlinkSync,
   writeFileSync,
 } from "node:fs";
 import { tmpdir } from "node:os";
@@ -290,7 +291,7 @@ test("run-proof validate-only rejects symlinked scratch and evidence roots befor
       rmSync(normalScratch, { recursive: true, force: true });
     }
   } finally {
-    rmSync(linkedScratch, { force: true });
+    unlinkSync(linkedScratch);
     rmSync(realScratch, { recursive: true, force: true });
     rmSync(evidenceTarget, { recursive: true, force: true });
   }
