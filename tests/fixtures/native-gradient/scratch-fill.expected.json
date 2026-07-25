@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "kind": "fill",
+  "file": {
+    "byteLength": 80113,
+    "sha256": "cf60d9be95b5c5ace79cbd950660f4287a15dca846f38624c47be465457b770c"
+  },
+  "riff": {
+    "rootId": "RIFX",
+    "formType": "Egg!",
+    "declaredEnd": 74320,
+    "trailerStart": 74320,
+    "trailerByteLength": 5793
+  },
+  "candidateCount": 1,
+  "candidate": {
+    "sourceOrder": 0,
+    "status": "valid",
+    "listFormType": "GCky",
+    "utf8Count": 1,
+    "parentMatchName": "ADBE Vector Graphic - G-Fill",
+    "colorsMatchName": "ADBE Vector Grad Colors",
+    "sourcePayloadSha256": "e5d836ddc053e6d5f63879218e8cb444356cca554c832ab193fbd6b3e1fbf8bd",
+    "gradient": {
+      "schemaVersion": 1,
+      "colorStops": [
+        {
+          "offset": 0.0,
+          "midpoint": 0.5,
+          "rgb": [1.0, 0.95294118, 0.21176471],
+          "extra": 1.0
+        },
+        {
+          "offset": 1.0,
+          "midpoint": 0.5,
+          "rgb": [0.0, 0.0, 0.0],
+          "extra": 1.0
+        }
+      ],
+      "alphaStops": [
+        {
+          "offset": 0.0,
+          "midpoint": 0.5,
+          "alpha": 1.0
+        },
+        {
+          "offset": 1.0,
+          "midpoint": 0.5,
+          "alpha": 1.0
+        }
+      ]
+    }
+  }
+}

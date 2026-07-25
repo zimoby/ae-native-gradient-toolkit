@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "kind": "stroke",
+  "file": {
+    "byteLength": 6332,
+    "sha256": "693fb4244b2cc7795401f63e24410854bd54ac928f9434289d2a7b6f229a0d3e"
+  },
+  "riff": {
+    "rootId": "RIFX",
+    "formType": "FaFX",
+    "declaredEnd": 2540,
+    "trailerStart": 2540,
+    "trailerByteLength": 3792
+  },
+  "candidateCount": 1,
+  "candidate": {
+    "sourceOrder": 0,
+    "status": "valid",
+    "listFormType": "GCky",
+    "utf8Count": 1,
+    "parentMatchName": "ADBE Vector Graphic - G-Stroke",
+    "colorsMatchName": "ADBE Vector Grad Colors",
+    "sourcePayloadSha256": "c5e572e38e207999e2eea9977762ac0ef9b2288677f6c6b6c7a8d091e157f980",
+    "gradient": {
+      "schemaVersion": 1,
+      "colorStops": [
+        {
+          "offset": 0,
+          "midpoint": 0.5,
+          "rgb": [1, 1, 1],
+          "extra": 1
+        },
+        {
+          "offset": 1,
+          "midpoint": 0.5,
+          "rgb": [0, 0, 0],
+          "extra": 1
+        }
+      ],
+      "alphaStops": [
+        {
+          "offset": 0,
+          "midpoint": 0.5,
+          "alpha": 1
+        },
+        {
+          "offset": 1,
+          "midpoint": 0.5,
+          "alpha": 1
+        }
+      ]
+    }
+  }
+}

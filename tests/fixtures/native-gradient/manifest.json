@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 2,
+  "acquisitionRuns": [
+    {
+      "id": "ae26-20260718T024931Z",
+      "acquiredAtUtc": "2026-07-18T13:13:47Z",
+      "afterEffectsVersion": "26.3x87",
+      "platform": "macOS 15.7.1 (24G231) arm64",
+      "method": "Property-scoped FFX captures and clean saved AEP copies from one blank token-owned project after exact target and candidate checks."
+    },
+    {
+      "id": "ae25-20260719",
+      "acquiredOn": "2026-07-19",
+      "afterEffectsVersion": "25.6.6x4",
+      "platform": "macOS (exact OS build not recorded in the retained fixture evidence)",
+      "method": "Clean saved AEP copy from a blank token-owned project containing two duplicate-named shape layers and four independently modified native Fill/Stroke gradients."
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "fixtures/native-gradient/fill-template.ffx",
+      "kind": "fill",
+      "role": "ffx-template",
+      "acquisitionRunId": "ae26-20260718T024931Z",
+      "ownership": "Zimoby; captured from a blank token-owned After Effects project.",
+      "distribution": "npm-and-repository",
+      "byteLength": 6332,
+      "sha256": "01dd99135c1ce428fabad2422d18e7742a87853d717e0f8342d64e9c84cdef28",
+      "expectedPath": "tests/fixtures/native-gradient/fill-template.expected.json",
+      "expectedSha256": "95f054b39cf198320bde91dff0873722200d0b3e319c483fafac3064b4493f85"
+    },
+    {
+      "path": "fixtures/native-gradient/stroke-template.ffx",
+      "kind": "stroke",
+      "role": "ffx-template",
+      "acquisitionRunId": "ae26-20260718T024931Z",
+      "ownership": "Zimoby; captured from a blank token-owned After Effects project.",
+      "distribution": "npm-and-repository",
+      "byteLength": 6332,
+      "sha256": "693fb4244b2cc7795401f63e24410854bd54ac928f9434289d2a7b6f229a0d3e",
+      "expectedPath": "tests/fixtures/native-gradient/stroke-template.expected.json",
+      "expectedSha256": "c5ec7028abf307e1965da36d9dffec926dd30d99879ce9310c0e5557850b6fd6"
+    },
+    {
+      "path": "tests/fixtures/native-gradient/scratch-fill.aep",
+      "kind": "fill",
+      "role": "unique-gradient-aep",
+      "acquisitionRunId": "ae26-20260718T024931Z",
+      "ownership": "Zimoby; captured from a blank token-owned After Effects project.",
+      "distribution": "repository-test-only",
+      "byteLength": 80113,
+      "sha256": "cf60d9be95b5c5ace79cbd950660f4287a15dca846f38624c47be465457b770c",
+      "expectedPath": "tests/fixtures/native-gradient/scratch-fill.expected.json",
+      "expectedSha256": "e1cded547fa325f3b5f12ee5bae220cbddba1430a6358876bb5b20cdf8d5eec6"
+    },
+    {
+      "path": "tests/fixtures/native-gradient/scratch-stroke.aep",
+      "kind": "stroke",
+      "role": "unique-gradient-aep",
+      "acquisitionRunId": "ae26-20260718T024931Z",
+      "ownership": "Zimoby; captured from a blank token-owned After Effects project.",
+      "distribution": "repository-test-only",
+      "byteLength": 81939,
+      "sha256": "50685a74a4c5d39587a9790bd769ad2669c85d589d1ebaef9f82a65a0ae16896",
+      "expectedPath": "tests/fixtures/native-gradient/scratch-stroke.expected.json",
+      "expectedSha256": "6caa31747272a607e0653da25e90f4c461ddf904fa63dc12928ca924341e3958"
+    },
+    {
+      "path": "tests/fixtures/native-gradient/exact-identity-ae25.aep",
+      "kind": "mixed",
+      "role": "exact-identity-aep",
+      "acquisitionRunId": "ae25-20260719",
+      "ownership": "Zimoby; captured from a blank token-owned After Effects project.",
+      "distribution": "repository-test-only",
+      "byteLength": 92573,
+      "sha256": "9a2bfccb07eab5cfaab2ee18ad0565787ab4f6bdc70788085881b3b456d04267",
+      "expectedPath": "tests/fixtures/native-gradient/exact-identity-ae25.expected.json",
+      "expectedSha256": "6aea60d310c1e2a45029a58b806155eb06e7646fea3befc26dad6553ca3f0bbb"
+    }
+  ],
+  "oracle": {
+    "name": "py-aep",
+    "repository": "https://github.com/forticheprod/py-aep",
+    "commit": "d52678605581f3290a891ec3195a34fd39ee802e",
+    "observedPinnedPackageVersion": "0.1.dev250+gd52678605",
+    "pythonVersion": "3.13.14",
+    "license": {
+      "spdx": "MIT",
+      "copyright": "Copyright (c) 2023 Fortiche production",
+      "sourceSha256": "7fc274705725a93e2397d3d9ab9aa834c8b52f55c5912812b425cdd32ab9cb24"
+    },
+    "validationMode": "external-local-only",
+    "toolingIncludedInRepository": false,
+    "externalAdapterSha256": "82280573839ce34e56e2b2129c3a67534c48ed1ae28bdc3b4f2a2658848ec319",
+    "externalRequirementsSha256": "c8308a5a81c935dbe21568a7abc4baf2061f6c1b43b4018b07689a8db790413f",
+    "regenerationPolicy": "The pinned oracle adapter, dependency requirements, environment, and command are local validation infrastructure outside this repository. Repository tests consume frozen expected models only.",
+    "rawOutputByteLength": 3105,
+    "rawOutputSha256": "ac386ece0dbd1058f1c9667d80640b4a6544e1dff8c0401a917a0f5cea85cd04",
+    "normalizedOutputSha256": "e95d494cf597dfc1ae3f07c65c88f5c77f8f8cabdcca1295f1b141d8c9815db6",
+    "agreement": "Exact ordered color/alpha stops including the sixth color-stop component, parent identity, colors match name, and source payload SHA-256 matched the packaged inspect CLI for both fixtures."
+  },
+  "distributability": {
+    "technicalProvenanceApproved": true,
+    "packageScope": "Only the two owned FFX templates are included in npm/Git dependency package artifacts and downstream extension packages.",
+    "repositoryScope": "All five owned binaries may remain as repository source or test evidence; all three AEP files are excluded from package artifacts.",
+    "publicLicense": "MIT, Copyright (c) 2026 Zimoby.",
+    "basis": "All five binaries were authored from blank token-owned projects using only native After Effects geometry and gradient properties; no imported media, fonts, third-party presets, or third-party project content are present. py-aep source is not vendored and was used only as an MIT-licensed oracle."
+  }
+}

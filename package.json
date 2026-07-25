@@ -1,0 +1,64 @@
+{
+  "name": "@zimoby/ae-native-gradient",
+  "version": "0.1.0",
+  "description": "Parse, inspect, and generate native Adobe After Effects Shape Gradient Fill and Stroke data.",
+  "keywords": [
+    "after-effects",
+    "aep",
+    "ffx",
+    "gradient",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "Zimoby",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zimoby/ae-native-gradient-toolkit.git"
+  },
+  "homepage": "https://github.com/zimoby/ae-native-gradient-toolkit#readme",
+  "bugs": {
+    "url": "https://github.com/zimoby/ae-native-gradient-toolkit/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "packageManager": "npm@10.9.8",
+  "engines": {
+    "node": ">=22 <23"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./templates/fill.ffx": "./fixtures/native-gradient/fill-template.ffx",
+    "./templates/stroke.ffx": "./fixtures/native-gradient/stroke-template.ffx",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "ae-native-gradient": "./bin/ae-native-gradient.mjs"
+  },
+  "files": [
+    "dist/",
+    "bin/",
+    "fixtures/native-gradient/fill-template.ffx",
+    "fixtures/native-gradient/stroke-template.ffx"
+  ],
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "test": "npm run build && node --experimental-strip-types --test tests/*.test.ts",
+    "test:live-proof": "npm run build && node --experimental-strip-types --test tests/live-proof-harness.test.ts",
+    "test:native-gradient": "npm test",
+    "pack:check": "npm run check:package",
+    "check:package": "npm run build && node scripts/check-package-contents.mjs",
+    "check": "npm test && npm run check:package",
+    "prepare": "npm run build",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3"
+  }
+}

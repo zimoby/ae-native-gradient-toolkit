@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "afterEffectsVersion": "25.6.6x4",
+  "projectFormat": 96,
+  "file": {
+    "byteLength": 92573,
+    "sha256": "9a2bfccb07eab5cfaab2ee18ad0565787ab4f6bdc70788085881b3b456d04267"
+  },
+  "targetCount": 4,
+  "targets": [
+    {
+      "compId": 1,
+      "layerId": 14,
+      "layerIndex": 1,
+      "kind": "fill",
+      "propertyIndexPath": [2, 1, 2, 2, 9],
+      "matchNamePath": [
+        "ADBE Root Vectors Group",
+        "ADBE Vector Group",
+        "ADBE Vectors Group",
+        "ADBE Vector Graphic - G-Fill",
+        "ADBE Vector Grad Colors"
+      ],
+      "gckyHeaderStart": 2114,
+      "gradient": {
+        "schemaVersion": 1,
+        "colorStops": [
+          { "offset": 0, "midpoint": 0.5, "rgb": [1, 0, 0], "extra": 1 },
+          { "offset": 1, "midpoint": 0.5, "rgb": [0, 0, 1], "extra": 1 }
+        ],
+        "alphaStops": [
+          { "offset": 0, "midpoint": 0.5, "alpha": 1 },
+          { "offset": 1, "midpoint": 0.5, "alpha": 1 }
+        ]
+      }
+    },
+    {
+      "compId": 1,
+      "layerId": 14,
+      "layerIndex": 1,
+      "kind": "stroke",
+      "propertyIndexPath": [2, 2, 2, 2, 8],
+      "matchNamePath": [
+        "ADBE Root Vectors Group",
+        "ADBE Vector Group",
+        "ADBE Vectors Group",
+        "ADBE Vector Graphic - G-Stroke",
+        "ADBE Vector Grad Colors"
+      ],
+      "gckyHeaderStart": 4940,
+      "gradient": {
+        "schemaVersion": 1,
+        "colorStops": [
+          { "offset": 0, "midpoint": 0.5, "rgb": [0, 1, 1], "extra": 1 },
+          { "offset": 1, "midpoint": 0.5, "rgb": [1, 0, 1], "extra": 1 }
+        ],
+        "alphaStops": [
+          { "offset": 0, "midpoint": 0.5, "alpha": 1 },
+          { "offset": 1, "midpoint": 0.5, "alpha": 1 }
+        ]
+      }
+    },
+    {
+      "compId": 1,
+      "layerId": 13,
+      "layerIndex": 2,
+      "kind": "fill",
+      "propertyIndexPath": [2, 1, 2, 2, 9],
+      "matchNamePath": [
+        "ADBE Root Vectors Group",
+        "ADBE Vector Group",
+        "ADBE Vectors Group",
+        "ADBE Vector Graphic - G-Fill",
+        "ADBE Vector Grad Colors"
+      ],
+      "gckyHeaderStart": 18620,
+      "gradient": {
+        "schemaVersion": 1,
+        "colorStops": [
+          { "offset": 0, "midpoint": 0.5, "rgb": [0, 1, 0], "extra": 1 },
+          { "offset": 1, "midpoint": 0.5, "rgb": [1, 1, 0], "extra": 1 }
+        ],
+        "alphaStops": [
+          { "offset": 0, "midpoint": 0.5, "alpha": 1 },
+          { "offset": 1, "midpoint": 0.5, "alpha": 1 }
+        ]
+      }
+    },
+    {
+      "compId": 1,
+      "layerId": 13,
+      "layerIndex": 2,
+      "kind": "stroke",
+      "propertyIndexPath": [2, 2, 2, 2, 8],
+      "matchNamePath": [
+        "ADBE Root Vectors Group",
+        "ADBE Vector Group",
+        "ADBE Vectors Group",
+        "ADBE Vector Graphic - G-Stroke",
+        "ADBE Vector Grad Colors"
+      ],
+      "gckyHeaderStart": 21446,
+      "gradient": {
+        "schemaVersion": 1,
+        "colorStops": [
+          { "offset": 0, "midpoint": 0.5, "rgb": [1, 0.5, 0], "extra": 1 },
+          { "offset": 1, "midpoint": 0.5, "rgb": [0.25, 0.75, 1], "extra": 1 }
+        ],
+        "alphaStops": [
+          { "offset": 0, "midpoint": 0.5, "alpha": 1 },
+          { "offset": 1, "midpoint": 0.5, "alpha": 1 }
+        ]
+      }
+    }
+  ]
+}
