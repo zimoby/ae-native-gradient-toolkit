@@ -260,7 +260,6 @@ export function indexAepNativeGradientTargets(
   const candidates = enumerateAepGradientCandidates(document);
   const candidateByHeaderStart = new Map<number, AepGradientCandidate>();
   for (const candidate of candidates) {
-    if (candidate.status !== "valid") continue;
     const offset = candidate.list.span.headerStart;
     if (candidateByHeaderStart.has(offset)) {
       throw new Error(`duplicate GCky candidate identity at byte ${offset}`);

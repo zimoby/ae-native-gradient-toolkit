@@ -6,6 +6,9 @@ import test from "node:test";
 
 type PackageManifest = {
   private?: boolean;
+  types: string;
+  module: string;
+  main: string;
   license: string;
   author: string;
   repository: { type: string; url: string };
@@ -42,6 +45,9 @@ const ignoredPaths = readFileSync(join(PROJECT_ROOT, ".gitignore"), "utf8")
   .filter((line) => line !== "" && line[0] !== "#");
 
 test("package metadata exports and packages generated dist while Git ignores it", () => {
+  assert.equal(manifest.types, "./dist/index.d.ts");
+  assert.equal(manifest.module, "./dist/index.js");
+  assert.equal(manifest.main, "./dist/index.js");
   assert.equal(manifest.exports["."].types, "./dist/index.d.ts");
   assert.equal(manifest.exports["."].import, "./dist/index.js");
   assert.ok(manifest.files.includes("dist/"));

@@ -305,7 +305,7 @@ test("non-comp items and non-shape layers never produce identity targets", () =>
   assert.equal(targets.every((target) => target.layerId === expected.targets[2].layerId), true);
 });
 
-test("malformed recognized property/store list types fail closed without descendant fallback", () => {
+test("malformed property/store structures fail closed while exact malformed payloads stay indexed", () => {
   const document = parseRifx(source);
   const folds = document.root.children.filter((node) => node.id === "LIST" && node.formType === "Fold");
   assert.equal(folds.length, 1);
@@ -330,8 +330,12 @@ test("malformed recognized property/store list types fail closed without descend
 
   const malformedGradient = source.slice();
   malformedGradient[gradientPayloads[0].span.dataStart] = "!".charCodeAt(0);
-  const validTargets = indexAepNativeGradientTargets(parseRifx(malformedGradient));
-  assert.deepEqual(validTargets.map((target) => target.candidate.list.span.headerStart), remainingOffsets);
+  const malformedTargets = indexAepNativeGradientTargets(parseRifx(malformedGradient));
+  assert.deepEqual(
+    malformedTargets.map((target) => target.candidate.list.span.headerStart),
+    expected.targets.map((target) => target.gckyHeaderStart),
+  );
+  assert.equal(malformedTargets[0].candidate.status, "malformed");
 });
 
 test("existing AE26 format-97 Fill and Stroke fixtures retain exact identity", () => {

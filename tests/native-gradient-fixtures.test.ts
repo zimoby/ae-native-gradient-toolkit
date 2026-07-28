@@ -17,6 +17,8 @@ type AcquisitionRun = {
   id: string;
   afterEffectsVersion: string;
   platform: string;
+  sourcePath?: string;
+  sourceSha256?: string;
   method: string;
 };
 
@@ -117,7 +119,7 @@ function normalizeGradient(gradient: NativeGradient): NativeGradient {
 
 test("frozen native-gradient manifest hashes every owned fixture and expected model", () => {
   assert.equal(manifest.schemaVersion, 2);
-  assert.equal(manifest.acquisitionRuns.length, 2);
+  assert.equal(manifest.acquisitionRuns.length, 4);
 
   const acquisitionRunIds = new Set(manifest.acquisitionRuns.map((run) => run.id));
   assert.equal(acquisitionRunIds.size, manifest.acquisitionRuns.length);
@@ -125,6 +127,13 @@ test("frozen native-gradient manifest hashes every owned fixture and expected mo
     assert.notEqual(run.afterEffectsVersion.trim(), "");
     assert.notEqual(run.platform.trim(), "");
     assert.notEqual(run.method.trim(), "");
+    assert.equal(run.sourcePath === undefined, run.sourceSha256 === undefined);
+    if (run.sourcePath !== undefined && run.sourceSha256 !== undefined) {
+      assert.equal(
+        sha256(new Uint8Array(readFileSync(join(REPO_ROOT, run.sourcePath)))),
+        run.sourceSha256,
+      );
+    }
   }
 
   const binaryPaths = [
@@ -132,7 +141,7 @@ test("frozen native-gradient manifest hashes every owned fixture and expected mo
     ...listBinaryFiles(join(REPO_ROOT, "tests/fixtures/native-gradient")),
   ].sort();
   const manifestedPaths = manifest.fixtures.map((fixture) => fixture.path).sort();
-  assert.equal(binaryPaths.length, 5);
+  assert.equal(binaryPaths.length, 9);
   assert.deepEqual(manifestedPaths, binaryPaths);
   assert.equal(new Set(manifestedPaths).size, manifestedPaths.length);
 

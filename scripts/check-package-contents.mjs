@@ -102,8 +102,8 @@ function expectedPackagePaths() {
     .map((fixture) => fixture.path)
     .sort();
 
-  if (templates.length !== 2 || templates.some((path) => !path.endsWith(".ffx"))) {
-    fail("fixture manifest must expose exactly two package-shipped FFX templates");
+  if (templates.length !== 6 || templates.some((path) => !path.endsWith(".ffx"))) {
+    fail("fixture manifest must expose exactly six package-shipped FFX templates");
   }
 
   const expected = new Set([

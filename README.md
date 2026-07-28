@@ -20,12 +20,15 @@ The toolkit provides one reusable implementation for parsing, inspecting, and ge
 - Explain generation with structural and SHA-256 evidence before any write.
 - Write through a verified sibling temporary file only with explicit `--write`; refuse replacement unless `--force` is present.
 - Verify owned AE 26.3 Fill/Stroke fixtures against frozen independent-oracle output.
+- Resolve ordered exact AEP target descriptors to complete gradients in one bounded parse.
+- Materialize the fixture-authenticated implicit AE white-to-black gradient default.
+- Ship provenance-approved AE 22.6, AE 25.6, and AE 26.3 template families with immutable integrity metadata.
 
 The external mechanism proof passed in AE `26.3x87` for Gradient Fill and Stroke with 2, 3, and 8 stops. Each case proved apply, saved-AEP readback, separate Undo, sibling/selection preservation, and owned cleanup. Product integration and exact-version compatibility gates remain intentionally pending and are not release claims.
 
 ## Installation and release status
 
-Package identity: `@zimoby/ae-native-gradient@0.1.0`.
+Package identity: `@zimoby/ae-native-gradient@0.2.0`.
 
 The package is not yet published to npm and no public release tag exists. After this repository becomes public, Git consumers should resolve `main` once and install the resulting immutable full commit:
 
@@ -48,6 +51,7 @@ Third-party validation tooling is intentionally external to this repository. `py
 | Modules | ESM only |
 | Automated CI | Ubuntu with the pinned Node version |
 | AEP identity indexing | Explicit project-format schemas `93..97`; unknown formats fail closed |
+| Package templates | Versioned AE 22.6, AE 25.6, and AE 26.3 Fill/Stroke families; product support policy remains consumer-owned |
 | Live AE mechanism proof | After Effects `26.3x87` on macOS `15.7.1` |
 
 The AE 26.3 result validates the native Fill/Stroke mechanism for the tested proof matrix. It is not a broad claim that every AE version, operating system, or product integration is supported.
@@ -137,8 +141,14 @@ Package subpaths:
 
 - `@zimoby/ae-native-gradient/templates/fill.ffx`
 - `@zimoby/ae-native-gradient/templates/stroke.ffx`
+- `@zimoby/ae-native-gradient/templates/ae22-6/fill.ffx`
+- `@zimoby/ae-native-gradient/templates/ae22-6/stroke.ffx`
+- `@zimoby/ae-native-gradient/templates/ae25-6/fill.ffx`
+- `@zimoby/ae-native-gradient/templates/ae25-6/stroke.ffx`
+- `@zimoby/ae-native-gradient/templates/ae26-3/fill.ffx`
+- `@zimoby/ae-native-gradient/templates/ae26-3/stroke.ffx`
 
-These are package-owned templates, not product-owned copies.
+The unversioned paths remain backward-compatible aliases for the AE 26.3 family. All listed files are package-owned templates, not product-owned copies.
 
 ## Consumer policy
 

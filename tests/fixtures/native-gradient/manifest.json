@@ -9,14 +9,78 @@
       "method": "Property-scoped FFX captures and clean saved AEP copies from one blank token-owned project after exact target and candidate checks."
     },
     {
+      "id": "chroma-relay-ae22-20260720",
+      "acquiredOn": "2026-07-20",
+      "afterEffectsVersion": "22.6.5x2",
+      "platform": "macOS (exact OS build not recorded in the retained fixture evidence)",
+      "method": "Property-scoped Fill and Stroke FFX captures from an owned blank Chroma Relay validation project; both templates passed unique payload inspection, exact kind generation, live application, and saved-AEP readback."
+    },
+    {
       "id": "ae25-20260719",
       "acquiredOn": "2026-07-19",
       "afterEffectsVersion": "25.6.6x4",
       "platform": "macOS (exact OS build not recorded in the retained fixture evidence)",
       "method": "Clean saved AEP copy from a blank token-owned project containing two duplicate-named shape layers and four independently modified native Fill/Stroke gradients."
+    },
+    {
+      "id": "ae25-template-20260719T050253Z-8D444EFF",
+      "acquiredOn": "2026-07-19",
+      "afterEffectsVersion": "25.6.6x4",
+      "platform": "macOS 15.7.1 (24G231) arm64",
+      "sourcePath": "tests/fixtures/native-gradient/exact-identity-ae25.aep",
+      "sourceSha256": "9a2bfccb07eab5cfaab2ee18ad0565787ab4f6bdc70788085881b3b456d04267",
+      "method": "Property-scoped Save Animation Preset captures from layer ID 14 of the token-owned exact-identity AE25 AEP fixture. Each capture selected exactly one ADBE Vector Grad Colors property under the expected Fill or Stroke parent; the scratch project stayed clean and the original zero-item project was restored byte-for-byte."
     }
   ],
   "fixtures": [
+    {
+      "path": "fixtures/native-gradient/ae22-6/fill-template.ffx",
+      "kind": "fill",
+      "role": "ffx-template",
+      "acquisitionRunId": "chroma-relay-ae22-20260720",
+      "ownership": "Zimoby; captured from a blank token-owned After Effects project.",
+      "distribution": "npm-and-repository",
+      "byteLength": 6376,
+      "sha256": "06120a98926bc03906a607481345e8e2d6d8938b32e090752f87847d21a426d2",
+      "expectedPath": "tests/fixtures/native-gradient/ae22-6-fill-template.expected.json",
+      "expectedSha256": "a8b9e31934dc145ab6ec2601f7160be6da9dc269bf50a352b983850c7969e251"
+    },
+    {
+      "path": "fixtures/native-gradient/ae22-6/stroke-template.ffx",
+      "kind": "stroke",
+      "role": "ffx-template",
+      "acquisitionRunId": "chroma-relay-ae22-20260720",
+      "ownership": "Zimoby; captured from a blank token-owned After Effects project.",
+      "distribution": "npm-and-repository",
+      "byteLength": 6376,
+      "sha256": "e934fed01b7c9e52c60210714ea916556b3cf159bb7dc09114045b516cb47b3b",
+      "expectedPath": "tests/fixtures/native-gradient/ae22-6-stroke-template.expected.json",
+      "expectedSha256": "002a0003f21e06de2f5b448d092165edd88a1cb8095ab92416fa3e092253cca2"
+    },
+    {
+      "path": "fixtures/native-gradient/ae25-6/fill-template.ffx",
+      "kind": "fill",
+      "role": "ffx-template",
+      "acquisitionRunId": "ae25-template-20260719T050253Z-8D444EFF",
+      "ownership": "Zimoby; captured from a blank token-owned After Effects project.",
+      "distribution": "npm-and-repository",
+      "byteLength": 6326,
+      "sha256": "a0cddaf936cc337a427d3a81c4224764fd6fc1f13a9bbeb6ae863276fa28dc59",
+      "expectedPath": "tests/fixtures/native-gradient/ae25-6-fill-template.expected.json",
+      "expectedSha256": "763d7448403b9a0f0e21843bfb731f6be9eb3344d48d6c1ef84e0648db31b89f"
+    },
+    {
+      "path": "fixtures/native-gradient/ae25-6/stroke-template.ffx",
+      "kind": "stroke",
+      "role": "ffx-template",
+      "acquisitionRunId": "ae25-template-20260719T050253Z-8D444EFF",
+      "ownership": "Zimoby; captured from a blank token-owned After Effects project.",
+      "distribution": "npm-and-repository",
+      "byteLength": 6326,
+      "sha256": "cb1ffe6195604834203a950433a83dd7097e971f8477567fdc2c32e3c34ed9dd",
+      "expectedPath": "tests/fixtures/native-gradient/ae25-6-stroke-template.expected.json",
+      "expectedSha256": "b67fa8957caca27659cfdc7aa54f641e57e84d6f9725d3414f11597ba9997e99"
+    },
     {
       "path": "fixtures/native-gradient/fill-template.ffx",
       "kind": "fill",
@@ -101,9 +165,9 @@
   },
   "distributability": {
     "technicalProvenanceApproved": true,
-    "packageScope": "Only the two owned FFX templates are included in npm/Git dependency package artifacts and downstream extension packages.",
-    "repositoryScope": "All five owned binaries may remain as repository source or test evidence; all three AEP files are excluded from package artifacts.",
+    "packageScope": "Only the six provenance-approved FFX templates are included in npm/Git dependency package artifacts and downstream extension packages.",
+    "repositoryScope": "All nine owned binaries may remain as repository source or test evidence; all three AEP files are excluded from package artifacts.",
     "publicLicense": "MIT, Copyright (c) 2026 Zimoby.",
-    "basis": "All five binaries were authored from blank token-owned projects using only native After Effects geometry and gradient properties; no imported media, fonts, third-party presets, or third-party project content are present. py-aep source is not vendored and was used only as an MIT-licensed oracle."
+    "basis": "All nine binaries were authored from blank token-owned projects using only native After Effects geometry and gradient properties; no imported media, fonts, third-party presets, or third-party project content are present. py-aep source is not vendored and was used only as an MIT-licensed oracle."
   }
 }
