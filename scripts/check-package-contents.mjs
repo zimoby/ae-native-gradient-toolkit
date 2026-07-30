@@ -115,6 +115,7 @@ function expectedPackagePaths() {
     ...templates,
   ]);
   for (const moduleName of sourceModules) {
+    expected.add(`src/${moduleName}.ts`);
     expected.add(`dist/${moduleName}.js`);
     expected.add(`dist/${moduleName}.js.map`);
     expected.add(`dist/${moduleName}.d.ts`);
@@ -147,6 +148,13 @@ function validateSourceMaps(paths) {
     for (const source of sourceMap.sources) {
       if (source !== expectedSource) {
         fail(`${path} exposes unexpected source path ${JSON.stringify(source)}`);
+      }
+      const packagedSource = relative(
+        PROJECT_ROOT,
+        join(PROJECT_ROOT, dirname(path), source),
+      ).split(sep).join("/");
+      if (!paths.includes(packagedSource)) {
+        fail(`${path} references source missing from package: ${packagedSource}`);
       }
     }
   }

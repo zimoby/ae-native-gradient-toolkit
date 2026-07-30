@@ -15,7 +15,8 @@ This repository contains reusable native After Effects Shape Gradient Fill/Strok
 
 ## Toolchain
 
-- Node `22.22.3`
+- Local development pin: Node `22.22.3`
+- Public runtime/CI support: Node `22.x` and `24.x`
 - npm `10.9.8`
 - TypeScript `5.8.3`
 
