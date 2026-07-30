@@ -30,16 +30,20 @@ An external run of the repository's fail-closed live-proof harness on AE `26.3x8
 
 Package identity: `@zimoby/ae-native-gradient@0.2.0`.
 
-The repository is public under MIT. The package is not yet published to npm and no public release tag exists. Until a release is announced, Git consumers should resolve the reviewed `main` commit once and install that immutable full SHA:
+Install the published release from npm:
+
+```bash
+npm install @zimoby/ae-native-gradient@0.2.0
+```
+
+The matching immutable source release is [`v0.2.0`](https://github.com/zimoby/ae-native-gradient-toolkit/releases/tag/v0.2.0). Git consumers can instead resolve the reviewed `main` commit once and install that full SHA:
 
 ```bash
 TOOLKIT_SHA="$(git ls-remote https://github.com/zimoby/ae-native-gradient-toolkit.git refs/heads/main | cut -f1)"
 npm install "git+https://github.com/zimoby/ae-native-gradient-toolkit.git#$TOOLKIT_SHA"
 ```
 
-Do not use `npm install @zimoby/ae-native-gradient` until an npm release is announced. Each npm `X.Y.Z` release must have a matching immutable `vX.Y.Z` Git tag pointing to the same source commit.
-
-Repository visibility, Git tags, and npm publication are separate release actions. A public repository does not imply a published package.
+Each npm `X.Y.Z` release must have a matching immutable `vX.Y.Z` Git tag pointing to the same source commit.
 
 Third-party validation tooling is intentionally external to this repository. `py-aep` was used as a pinned MIT-licensed read-only oracle, but its source, adapter, dependency requirements, environment, and regeneration command are not part of this project or package. The repository retains only owned fixtures plus frozen provenance and agreement hashes.
 
