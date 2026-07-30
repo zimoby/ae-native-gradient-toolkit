@@ -19,18 +19,18 @@ The toolkit provides one reusable implementation for parsing, inspecting, and ge
 - Inspect bounded regular files through the packaged CLI.
 - Explain generation with structural and SHA-256 evidence before any write.
 - Write through a verified sibling temporary file only with explicit `--write`; refuse replacement unless `--force` is present.
-- Verify owned AE 26.3 Fill/Stroke fixtures against frozen independent-oracle output.
+- Compare owned AE 26.3 Fill/Stroke fixtures with immutable expected models produced by a pinned independent-oracle validation.
 - Resolve ordered exact AEP target descriptors to complete gradients in one bounded parse.
 - Materialize the fixture-authenticated implicit AE white-to-black gradient default.
 - Ship provenance-approved AE 22.6, AE 25.6, and AE 26.3 template families with immutable integrity metadata.
 
-The external mechanism proof passed in AE `26.3x87` for Gradient Fill and Stroke with 2, 3, and 8 stops. Each case proved apply, saved-AEP readback, separate Undo, sibling/selection preservation, and owned cleanup. Product integration and exact-version compatibility gates remain intentionally pending and are not release claims.
+An external run of the repository's fail-closed live-proof harness on AE `26.3x87` reported passing Gradient Fill and Stroke cases with 2, 3, and 8 stops. The run covered apply, saved-AEP readback, separate Undo, sibling/selection preservation, and owned cleanup. Result artifacts are retained outside this repository, so this is development provenance rather than a reproducible package or broad compatibility claim. Product integration and exact-version compatibility gates remain intentionally pending.
 
 ## Installation and release status
 
 Package identity: `@zimoby/ae-native-gradient@0.2.0`.
 
-The package is not yet published to npm and no public release tag exists. After this repository becomes public, Git consumers should resolve `main` once and install the resulting immutable full commit:
+The repository is public under MIT. The package is not yet published to npm and no public release tag exists. Until a release is announced, Git consumers should resolve the reviewed `main` commit once and install that immutable full SHA:
 
 ```bash
 TOOLKIT_SHA="$(git ls-remote https://github.com/zimoby/ae-native-gradient-toolkit.git refs/heads/main | cut -f1)"
@@ -39,7 +39,7 @@ npm install "git+https://github.com/zimoby/ae-native-gradient-toolkit.git#$TOOLK
 
 Do not use `npm install @zimoby/ae-native-gradient` until an npm release is announced. Each npm `X.Y.Z` release must have a matching immutable `vX.Y.Z` Git tag pointing to the same source commit.
 
-The package is licensed under MIT. Repository visibility, Git tags, and npm publication are separate release actions.
+Repository visibility, Git tags, and npm publication are separate release actions. A public repository does not imply a published package.
 
 Third-party validation tooling is intentionally external to this repository. `py-aep` was used as a pinned MIT-licensed read-only oracle, but its source, adapter, dependency requirements, environment, and regeneration command are not part of this project or package. The repository retains only owned fixtures plus frozen provenance and agreement hashes.
 
@@ -47,14 +47,14 @@ Third-party validation tooling is intentionally external to this repository. `py
 
 | Surface | Contract |
 |---|---|
-| Node.js | `22.x`; package engine is `>=22 <23`, CI pins `.node-version` (`22.22.3`) |
+| Node.js | `22.x` and `24.x`; local development remains pinned to `.node-version` (`22.22.3`) |
 | Modules | ESM only |
-| Automated CI | Ubuntu with the pinned Node version |
+| Automated CI | Ubuntu matrix on Node `22.22.3` and current `24.x` |
 | AEP identity indexing | Explicit project-format schemas `93..97`; unknown formats fail closed |
 | Package templates | Versioned AE 22.6, AE 25.6, and AE 26.3 Fill/Stroke families; product support policy remains consumer-owned |
-| Live AE mechanism proof | After Effects `26.3x87` on macOS `15.7.1` |
+| External live-proof provenance | After Effects `26.3x87` on macOS `15.7.1`; result artifacts retained outside this repository |
 
-The AE 26.3 result validates the native Fill/Stroke mechanism for the tested proof matrix. It is not a broad claim that every AE version, operating system, or product integration is supported.
+The reported AE 26.3 result supports the native Fill/Stroke mechanism for that bounded proof matrix. It is not a claim that every AE version, operating system, or product integration is supported.
 
 ## Development
 
@@ -152,7 +152,7 @@ The unversioned paths remain backward-compatible aliases for the AE 26.3 family.
 
 ## Consumer policy
 
-Verify integration using a packed tarball in a clean temporary consumer, then depend on a reviewed npm version or exact Git commit. Immutable versions are recommended for reproducibility. The MIT license permits copying, modification, and redistribution.
+Verify integration using a packed tarball in a clean temporary consumer, then depend on a reviewed npm version or exact Git commit. Package artifacts include compiled ESM, declarations, matching TypeScript sources and source maps, the CLI, and the six provenance-approved templates. Immutable versions are recommended for reproducibility. The MIT license permits copying, modification, and redistribution.
 
 ## Support and contributing
 
